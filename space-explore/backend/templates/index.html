@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Explorer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="navbar-container">
+            <a href="#" class="logo">SpaceExplorer</a>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">About Us</a>
+                <a href="#" id="'contact-link">Contact</a>
+                <a href="/login">Login</a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="content">
+        <h1>Welcome to Space Explorer</h1>
+        
+        <section id="nasa-data">
+            <h2>NASA Data</h2>
+            <div>
+                <h3 id="nasa-title"></h3>
+                <p id="nasa-explanation"></p>
+                <a id="nasa-url" href="#" target="_blank">View Media</a>
+                <div id="nasa-media-container">
+                    <!-- Image or Video will be displayed here -->
+                </div>
+            </div>
+        </section>
+
+        <section id="spacex-data">
+            <h2>SpaceX Latest Launch</h2>
+            <div>
+                <p id="spacex-details"></p>
+            </div>
+        </section>
+
+        <section id="n2yo-data">
+            <h2>N2YO TLE Data</h2>
+            <div>
+                <p id="n2yo-details"></p>
+            </div>
+        </section>
+
+        <section id="iss-data">
+            <h2>Open Notify ISS Position</h2>
+            <div>
+                <p id="iss-details"></p>
+            </div>
+        </section>
+
+        <section id="spacex-rockets">
+            <h2>SpaceX Rockets</h2>
+            <div>
+                <!-- Rocket data will be inserted here -->
+            </div>
+        </section>
+
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <div id="gallery-content">
+                <!-- Gallery items will be inserted here -->
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Space Explorer. All rights reserved.</p>
+    </footer>
+
+    <!-- Pop-up Modal -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="question">Your Question:</label>
+                <textarea id="question" name="question" rows="4" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

@@ -1,25 +1,303 @@
-body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
+/* General Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212; /* Dark space background */
+    color: #f0f0f0; /* Light text color for contrast */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+}
+
+/* Navigation Styles */
+nav {
+    width: 100%;
+    background-color: #1e1e1e; /* Darker background for the navbar */
+    padding: 10px;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Center the navbar content */
+    margin: 0 auto; /* Center horizontally */
+    padding: 0 20px; /* Add padding for spacing */
+}
+
+.logo {
+    font-size: 1.5em;
+    color: #03dac6; /* Neon cyan color */
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 0 0 8px #03dac6; /* Neon glow effect */
+}
+
+.nav-links {
+    display: flex;
+}
+
+.nav-links a {
+    color: #ffffff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: 0 0 4px #ffffff;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+    color: #03dac6; /* Neon cyan on hover */
+}
+
+/* Login and Signup Styles */
+#login-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px; /* Space between forms */
+    margin: 5% auto;
+    width: 80%;
+    max-width: 1000px;
+}
+
+.form-wrapper {
+    display: flex;
+    gap: 20px; /* Space between login and sign-up boxes */
+}
+
+/* Form Container Styles */
+.form-container {
+    background-color: #2c2c2c;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+
+/* Login Form Styles */
+.login-form {
+    /* Styles specific to the login form, if needed */
+}
+
+/* Signup Form Styles */
+.signup-form {
+    /* Styles specific to the sign-up form, if needed */
+}
+
+/* Form Field Styles */
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: #3e3e3e;
+    color: #ffffff;
+    border: 1px solid #03dac6;
+    border-radius: 4px;
+}
+
+form button[type="submit"] {
+    background-color: #03dac6;
+    color: #121212;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 15px;
+}
+
+form button[type="submit"]:hover {
+    background-color: #bb86fc;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1001; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Black with opacity */
+}
+
+.modal-content {
+    background-color: #2c2c2c;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+.close-button {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Content Styles */
+#content {
+    background-color: #1e1e1e; /* Dark background for content area */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 900px;
+    margin-top: 70px; /* Adjust for navbar height */
+    box-sizing: border-box;
+    flex: 1; /* Allows content to grow and push footer down */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Heading Styles */
 h1 {
-    font-size: 24px;
+    font-size: 2.8em;
+    color: #03dac6; /* Neon cyan */
+    margin-bottom: 25px;
+    font-weight: 700;
+    text-shadow: 0 0 8px #03dac6; /* Neon glow effect */
 }
 
 h2 {
-    margin-top: 20px;
+    font-size: 1.8em;
+    color: #bb86fc; /* Neon purple */
+    margin: 30px 0 15px;
+    font-weight: 500;
+    text-shadow: 0 0 6px #bb86fc; /* Neon glow effect */
+}
+
+/* API Data Sections */
+section {
+    margin-bottom: 30px;
+}
+
+#nasa-data, #spacex-data, #n2yo-data, #iss-data, #spacex-rockets {
+    background-color: #2c2c2c; /* Slightly lighter background for data sections */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+    color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    width: 100%; /* Ensure full width of container */
+    max-width: 900px; /* Match content width */
+}
+
+a {
+    color: #03dac6; /* Neon cyan */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #bb86fc; /* Neon purple */
 }
 
 img {
+    margin-top: 15px;
     max-width: 100%;
-    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
 }
 
-p {
-    font-size: 16px;
+/* Rocket Image Styling */
+.rocket img {
+    margin-top: 15px;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
 }
 
-div {
-    margin-bottom: 20px;
+/* Footer Styles */
+footer {
+    background-color: #1e1e1e; /* Dark background for footer */
+    color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.6);
+    margin-top: 30px; /* Adds spacing above the footer */
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 1200px) {
+    .logo {
+        font-size: 1.3em;
+    }
+
+    .nav-links a {
+        margin: 0 10px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links a {
+        margin: 5px 0;
+    }
+
+    #content {
+        width: 100%;
+        padding: 20px;
+        margin-top: 60px; /* Adjust for navbar height */
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
 }
